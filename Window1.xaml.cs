@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +22,27 @@ namespace ProjektSem
         public Window1()
         {
             InitializeComponent();
+
+            Database1Entities db = new Database1Entities();
+            var docs = from d in db.Doktors
+                       select new
+                       {
+
+                           ImieDoktora = d.Imie,
+                           NazwiskoDoktora = d.Nazwisko,
+                           Specjalizacja = d.Specjalizacja,
+                           Odzial = d.Odzial
+
+                       };
+            foreach (var item in docs)
+            {
+                Console.WriteLine(item.ImieDoktora);
+                Console.WriteLine(item.NazwiskoDoktora);
+                Console.WriteLine(item.Specjalizacja);
+                Console.WriteLine(item.Odzial);
+
+            }
+            this.gridDoctors.ItemsSource = docs.ToList();
         }
         private void btnSecond_Click(object sender, RoutedEventArgs e)
         {
