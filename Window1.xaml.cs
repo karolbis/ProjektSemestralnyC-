@@ -50,6 +50,37 @@ namespace ProjektSem
             sW.Show();
             this.Close();
         }
+
+        private void gridDoctors_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Database1Entities db = new Database1Entities();
+
+            Doktor doctorObject = new Doktor()
+            {
+                Imie = txtName.Text,
+                Nazwisko = txtNazwisko.Text,
+                Specjalizacja = txtSpecjalizacja.Text,
+                Odzial = txtOdzial.Text
+            };
+
+            db.Doktors.Add(doctorObject);
+            db.SaveChanges();
+       
+        }
+
+        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Database1Entities db = new Database1Entities();
+            this.gridDoctors.ItemsSource = db.Doktors.ToList();
+
+
+        }
+
+
+
     }
 }
- 
