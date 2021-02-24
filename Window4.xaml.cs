@@ -31,10 +31,7 @@ namespace ProjektSem
                           IdWizyty = di.WizytaID,
                           Nazwa = di.Nazwa,
                           Opis = di.Opis,
-                         
-
-
-
+                
                       };
             foreach (var item in Diag)
             {
@@ -52,6 +49,28 @@ namespace ProjektSem
             MainWindow sW = new MainWindow();
             sW.Show();
             this.Close();
+        }
+
+        private void BtnUpdate4_Click(object sender, RoutedEventArgs e)
+        {
+            Database1Entities db = new Database1Entities();
+            this.gridDiag.ItemsSource = db.Diagnozas.ToList();
+        }
+
+        private void BtnAdd4_Click(object sender, RoutedEventArgs e)
+        {
+            Database1Entities db = new Database1Entities();
+
+            Diagnoza DiagnozaObject = new Diagnoza()
+            {
+                WizytaID = txtWizytaIdW.SelectionStart,
+                Nazwa = txtNazwaW.Text,
+                Opis = txtOpisW.Text,
+                
+            };
+
+            db.Diagnozas.Add(DiagnozaObject);
+            db.SaveChanges();
         }
     }
 }
