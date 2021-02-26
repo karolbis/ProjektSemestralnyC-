@@ -1,18 +1,21 @@
-<Window x:Class="ProjektSem.Window1"
+﻿<Window x:Class="ProjektSem.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSem"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="450" Width="800" ResizeMode="NoResize" Background="Aqua">
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="325*"/>
-            <RowDefinition Height="94*"/>
+            <RowDefinition Height="231*"/>
+            <RowDefinition Height="188*"/>
+
+
         </Grid.RowDefinitions>
         <TextBlock FontSize="30" Grid.RowSpan="2"><Run Text="Do"/><Run Text="k"/><Run Text="t"/><Run Text="o"/><Run Text="r"/><Run Text="zy"/><Run Text=" "/><Run Text=" "/></TextBlock>
-        <Button Name="btnSecond" Content="Main menu" Click="btnSecond_Click" RenderTransformOrigin="2.138,3.342" Margin="700,22.031,20,24" Grid.Row="1">
+        <Button Name="btnSecond" Content="Menu glowne" Click="btnSecond_Click" RenderTransformOrigin="2.138,3.342" Margin="694,119,11,10" Grid.Row="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,17 +25,28 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid x:Name="gridDoctors" RenderTransformOrigin="0.499,0.797" Margin="0,40,0,161.969" SelectionChanged="gridDoctors_SelectionChanged"/>
-        <Label Content="Imie:" HorizontalAlignment="Left" Height="23" Margin="27,253,0,48.969" RenderTransformOrigin="0.707,1.593"></Label>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="105,253,0,48.969" TextWrapping="Wrap" Width="87"></TextBox>
-        <Label Content="Nazwisko:" HorizontalAlignment="Left" Height="23" Margin="27,294,0,7.969" RenderTransformOrigin="0.707,1.593"></Label>
-        <TextBox x:Name="txtNazwisko" HorizontalAlignment="Left" Height="23" Margin="105,294,0,7.969" TextWrapping="Wrap" Width="87"></TextBox>
-        <Label Content="Specjalizacja:" HorizontalAlignment="Left" Height="23" Margin="21,10,0,61" RenderTransformOrigin="0.707,1.593" Grid.Row="1"></Label>
-        <TextBox x:Name="txtSpecjalizacja" HorizontalAlignment="Left" Height="23" Margin="105,10,0,61" TextWrapping="Wrap" Width="87" Grid.Row="1"></TextBox>
-        <Label Content="Odzial:" HorizontalAlignment="Left" Height="23" Margin="27,47.031,0,24" RenderTransformOrigin="0.707,1.593" Grid.Row="1"></Label>
-        <TextBox x:Name="txtOdzial" HorizontalAlignment="Left" Height="23" Margin="105,47.031,0,24" TextWrapping="Wrap" Width="87" Grid.Row="1"></TextBox>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="244,0,0,54" VerticalAlignment="Bottom" Width="81" Grid.Row="1" Click="BtnAdd_Click"></Button>
-        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="244,0,0,19" VerticalAlignment="Bottom" Width="81" Grid.Row="1" Click="BtnUpdate_Click"></Button>
+        <DataGrid x:Name="gridDoctors" RenderTransformOrigin="0.499,0.797" Margin="0,40,0,33" SelectionChanged="gridDoctors_SelectionChanged"/>
+        <Label Content="Imie:" HorizontalAlignment="Left" Margin="46,27,0,119" RenderTransformOrigin="0.707,1.593" Width="46" Grid.Row="1"/>
+        <TextBox x:Name="txtImie" HorizontalAlignment="Left" Height="23" Margin="103,28,0,138" TextWrapping="Wrap" Width="87" Grid.Row="1"></TextBox>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="34,58,0,99" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtNazwisko" HorizontalAlignment="Left" Height="23" Margin="103,66,0,100" TextWrapping="Wrap" Width="87" Grid.Row="1"></TextBox>
+        <Label Content="Specjalizacja:" HorizontalAlignment="Left" Margin="18,95,0,57" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtSpecjalizacja" HorizontalAlignment="Left" Height="23" Margin="103,102,0,64" TextWrapping="Wrap" Width="87" Grid.Row="1" RenderTransformOrigin="0.545,-0.07"/>
+        <Label Content="Odzial:" HorizontalAlignment="Left" Margin="29,130,0,14" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtOdzial" HorizontalAlignment="Left" Height="23" Margin="103,134,0,32" TextWrapping="Wrap" Width="87" Grid.Row="1"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="230,0,0,10" VerticalAlignment="Bottom" Width="81" Click="BtnAdd_Click" Grid.Row="1"/>
+        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="230,0,0,46" VerticalAlignment="Bottom" Width="81" Click="BtnUpdate_Click" Grid.Row="1"/>
+        <Button x:Name="btnUpdateDoctor" Content="Zmien dane" HorizontalAlignment="Left" Margin="531,0,0,25" VerticalAlignment="Bottom" Width="81" Click="btnUpdateDoctor_Click" Grid.Row="1"/>
+        <Label Content="Imie:" HorizontalAlignment="Left" Margin="360,23,0,123" RenderTransformOrigin="0.707,1.593" Width="46" Grid.Row="1"/>
+        <TextBox x:Name="txtImie2" HorizontalAlignment="Left" Height="23" Margin="417,24,0,142" TextWrapping="Wrap" Width="87" Grid.Row="1"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="348,54,0,103" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtNazwisko2" HorizontalAlignment="Left" Height="23" Margin="417,62,0,104" TextWrapping="Wrap" Width="87" Grid.Row="1"/>
+        <Label Content="Specjalizacja:" HorizontalAlignment="Left" Margin="332,91,0,61" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtSpecjalizacja2" HorizontalAlignment="Left" Height="23" Margin="417,98,0,68" TextWrapping="Wrap" Width="87" Grid.Row="1" RenderTransformOrigin="0.545,-0.07"/>
+        <Label Content="Odzial:" HorizontalAlignment="Left" Margin="343,126,0,18" RenderTransformOrigin="0.707,1.593" Grid.Row="1"/>
+        <TextBox x:Name="txtOdzial2" HorizontalAlignment="Left" Height="23" Margin="417,130,0,36" TextWrapping="Wrap" Width="87" Grid.Row="1"/>
+        <Button Content="Usun" HorizontalAlignment="Left" Margin="531,0,0,54" VerticalAlignment="Bottom" Width="81" Click="BtnDelete_Click" Grid.Row="1"/>
+
     </Grid>
 
 </Window>

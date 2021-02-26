@@ -25,7 +25,7 @@ namespace ProjektSem
             //displays window whenever application is running
             InitializeComponent();
         }
-
+        // przyciski do przejscia do poszczegolnych sekcji 
         private void btnFirst_Click(object sender, RoutedEventArgs e)
         {
             Window1 sW = new Window1();
@@ -50,5 +50,11 @@ namespace ProjektSem
             sW.Show();
             this.Close();
         }
+        // Zamykanie calej aplikacji
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        //uzyty obraz w Main Menu jest z darmowego źródła https://www.istockphoto.com/
     }
 }

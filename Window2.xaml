@@ -5,10 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSem"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
-    <StackPanel>
+        Title="Window2" Height="450" Width="800" ResizeMode="NoResize" Background="Aqua">
+    <Grid>
         <TextBlock FontSize="30">Pacjenci</TextBlock>
-        <Button Name="btnSecond" Content="Main menu" Click="btnSecond_Click"/>
-    </StackPanel>
-       
+        <Button Name="btnSecond" Content="Menu glowne" Click="btnSecond_Click" RenderTransformOrigin="0.38,0.39" Margin="683,350,10,9"/>
+        <DataGrid x:Name="gridPacjenci" HorizontalAlignment="Left" Height="141" Width="794" Margin="0,41,0,239" SelectionChanged="gridPacjenci_SelectionChanged"/>
+        <Label Content="Imie:" HorizontalAlignment="Left" Margin="27,215,0,170" RenderTransformOrigin="0.707,1.593" Width="46"/>
+        <TextBox x:Name="txtImieP" HorizontalAlignment="Left" Margin="78,219,0,170" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="10,270,0,115" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtNazwiskoP" HorizontalAlignment="Left" Margin="78,275,0,118" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Wiek:" HorizontalAlignment="Left" Margin="27,308,0,76" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtWiekP" HorizontalAlignment="Left" Margin="78,316,0,76" TextWrapping="Wrap" Width="87" RenderTransformOrigin="0.545,-0.07"/>
+        <Label Content="Pesel(11):" HorizontalAlignment="Left" Margin="185,219,0,166" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPeselP" HorizontalAlignment="Left" Margin="241,219,0,173" TextWrapping="Wrap" Width="87"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="230,0,0,10" VerticalAlignment="Bottom" Width="81" Click="BtnAdd2_Click" Grid.Row="1"/>
+        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="230,0,0,46" VerticalAlignment="Bottom" Width="81" Click="BtnUpdate2_Click" Grid.Row="1"/>
+        <Label Content="Choroba:" HorizontalAlignment="Left" Margin="178,270,0,103" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtChorobaP" HorizontalAlignment="Left" Margin="241,270,0,76" TextWrapping="Wrap" Width="111" RenderTransformOrigin="0.478,0.242"/>
+        <Button Name="btnUsun" Content="Usun pacjenta" Click="btnDelete_Click" RenderTransformOrigin="0.572,0.525" Margin="521,384,179,10"/>
+        <Button Name="btnUpdate" Content="Zmien dane" Click="btnChange_Click" RenderTransformOrigin="0.572,0.525" Margin="521,350,179,42"/>
+        <Label Content="Imie:" HorizontalAlignment="Left" Margin="394,219,0,166" RenderTransformOrigin="0.707,1.593" Width="46"/>
+        <TextBox x:Name="txtImieP2" HorizontalAlignment="Left" Margin="462,219,0,170" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="377,267,0,118" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtNazwiskoP2" HorizontalAlignment="Left" Margin="462,270,0,123" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Wiek:" HorizontalAlignment="Left" Margin="401,308,0,76" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtWiekP2" HorizontalAlignment="Left" Margin="462,308,0,84" TextWrapping="Wrap" Width="87" RenderTransformOrigin="0.545,-0.07"/>
+        <Label Content="Pesel(11):" HorizontalAlignment="Left" Margin="587,233,0,152" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPeselP2" HorizontalAlignment="Left" Margin="646,233,0,159" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Choroba:" HorizontalAlignment="Left" Margin="568,278,0,95" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtChorobaP2" HorizontalAlignment="Left" Margin="646,270,0,87" TextWrapping="Wrap" Width="98"/>
+
+    </Grid>
+
+
 </Window>

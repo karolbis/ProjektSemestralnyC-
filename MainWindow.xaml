@@ -5,18 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200">
-    
-    <StackPanel Orientation="Vertical">
-        <Border Background="#2f5cb6"/>
-        <Border Grid.Column ="1" Background="#1f3d7a"/>
-        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#152951"/>
-        <TextBlock FontSize="40">Asystent obsługi szpitala</TextBlock>
-        <Button Name="btnFirst" Content="Doktorzy" Click="btnFirst_Click"/>
-        <Button Name="btnThird" Content="Pacjenci" Click="btnThird_Click"/>
-        <Button Name="btnForth" Content="Wizyty" Click="btnForth_Click"/>
-        <Button Name="btnFifth" Content="Diagnozy" Click="btnFifth_Click"/>
-        
-    </StackPanel>
+        Title="MainWindow" Height="600" Width="900" ResizeMode="NoResize" Background="Aqua" >
+
+    <Grid>
+
+        <Border Grid.Column ="1" />
+        <Border Grid.Row="1" Grid.ColumnSpan="2" />
+        <TextBlock FontSize="40"><Run Text="Asystent obsługi szpitala"/><InlineUIContainer>
+            </InlineUIContainer></TextBlock>
+        <Button Name="btnFirst" Content="Doktorzy" Click="btnFirst_Click" Margin="0,134,632,348" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.672"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnThird" Content="Pacjenci" Click="btnThird_Click" Margin="0,244,633,238" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.429"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnForth" Content="Wizyty" Click="btnForth_Click" Margin="0,358,632,122" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.521"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnFifth" Content="Diagnozy" Click="btnFifth_Click" Margin="0,471,636,19" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.82"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="CloseButton" Content="Zamknij" Click="CloseButton_Click" Margin="697,460,27,32" />
+        <Image Margin="359,89,27,157" Source="docpicfree.jpg"></Image>
+    </Grid>
 </Window>
- 

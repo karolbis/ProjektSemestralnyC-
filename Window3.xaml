@@ -5,12 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSem"
         mc:Ignorable="d"
-        Title="Window3" Height="450" Width="800">
-    <StackPanel>
+        Title="Window3" Height="450" Width="800" ResizeMode="NoResize" Background="Aqua" >
+    <Grid>
         <TextBlock FontSize="30">Wizyty</TextBlock>
-        <Button Name="btnSecond" Content="Main menu" Click="btnSecond_Click"/>
+        <Button Name="btnSecond" Content="Menu glowne" Click="btnSecond_Click" Margin="678,354,10,8"/>
+        <DataGrid x:Name="gridWizyty" HorizontalAlignment="Left" Height="140" Width="792" Margin="2,50,0,231" SelectionChanged="gridWizyty_SelectionChanged"/>
+        <Label Content="ID Doktora:" HorizontalAlignment="Left" Margin="10,195,0,186" RenderTransformOrigin="0.707,1.593" Width="79"/>
+        <TextBox x:Name="txtDoktorW" HorizontalAlignment="Left" Margin="103,195,0,196" TextWrapping="Wrap" Width="87"/>
+        <Label Content="ID Pacjenta:" HorizontalAlignment="Left" Margin="10,240,0,143" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPacjentW" HorizontalAlignment="Left" Margin="103,240,0,148" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Data Wizyty:" HorizontalAlignment="Left" Margin="10,320,0,55" RenderTransformOrigin="0.707,1.593"/>
+        <Label Content="Gabinet:" HorizontalAlignment="Left" Margin="18,283,0,101" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtGabinetW" HorizontalAlignment="Left" Margin="103,283,0,104" TextWrapping="Wrap" Width="87"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="248,0,0,12" VerticalAlignment="Bottom" Width="81" Click="BtnAdd3_Click"/>
+        <Button Content="Aktualizuj" HorizontalAlignment="Left" Margin="248,0,0,43" VerticalAlignment="Bottom" Width="81" Click="BtnUpdate3_Click"/>
+        <Label Content="Pietro:" HorizontalAlignment="Left" Margin="10,358,0,17" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPietroW" HorizontalAlignment="Left" Margin="103,358,0,29" TextWrapping="Wrap" Width="87"/>
+        <DatePicker x:Name="DataW" HorizontalAlignment="Left" Margin="103,329,0,0" VerticalAlignment="Top" Height="26" Width="129"/>
+        <Button Content="Zmien dane" HorizontalAlignment="Left" Margin="569,0,0,50" VerticalAlignment="Bottom" Width="81" Click="ZmienDane_Click"/>
+        <Button Content="Usun wizyte" HorizontalAlignment="Left" Margin="569,0,0,17" VerticalAlignment="Bottom" Width="81" Click="UsunWizyte_Click" RenderTransformOrigin="0.872,0.61"/>
+        <Label Content="ID Doktora:" HorizontalAlignment="Left" Margin="342,195,0,186" RenderTransformOrigin="0.707,1.593" Width="79"/>
+        <TextBox x:Name="txtDoktorW2" HorizontalAlignment="Left" Margin="435,195,0,196" TextWrapping="Wrap" Width="87"/>
+        <Label Content="ID Pacjenta:" HorizontalAlignment="Left" Margin="342,240,0,143" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPacjentW2" HorizontalAlignment="Left" Margin="435,240,0,148" TextWrapping="Wrap" Width="87" />
+        <Label Content="Data Wizyty:" HorizontalAlignment="Left" Margin="342,320,0,55" RenderTransformOrigin="0.707,1.593"/>
+        <Label Content="Gabinet:" HorizontalAlignment="Left" Margin="350,283,0,101" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtGabinetW2" HorizontalAlignment="Left" Margin="435,283,0,104" TextWrapping="Wrap" Width="87"/>
+        <Label Content="Pietro:" HorizontalAlignment="Left" Margin="342,358,0,17" RenderTransformOrigin="0.707,1.593"/>
+        <TextBox x:Name="txtPietroW2" HorizontalAlignment="Left" Margin="435,358,0,29" TextWrapping="Wrap" Width="87"/>
+        <DatePicker x:Name="DataW2" HorizontalAlignment="Left" Margin="435,329,0,0" VerticalAlignment="Top" Height="26" Width="129"/>
+
+    </Grid>
 
 
-    </StackPanel>
-       
+
 </Window>
